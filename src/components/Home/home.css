@@ -1,0 +1,287 @@
+.home,
+.home__container {
+  position: relative;
+}
+
+.home__container {
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  display: grid;
+  row-gap: 1rem;
+}
+
+.home__title {
+  font-size: var(--biggest-font-size);
+  font-family: var(--second-font);
+  color: var(--title-color);
+  margin-bottom: 0.75rem;
+}
+
+.home__title span {
+  color: var(--first-color);
+  display: block;
+}
+
+.home__description,
+.home__button {
+  font-weight: 600;
+}
+
+.home__description {
+  color: var(--title-color);
+  margin-bottom: 1.5rem;
+}
+
+.home__button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem 0.25rem;
+  box-shadow: 0 8px 20px hsla(2, 100%, 45%, 0.28);
+  transition: background-color 0.4s;
+}
+
+.home__button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.home__images {
+  position: relative;
+  width: 325px;
+  height: 378px;
+  justify-self: center;
+}
+
+.home__images img {
+  position: absolute;
+}
+
+.liquid-img {
+  max-width: initial;
+  width: 340px;
+  left: -0.5rem;
+}
+
+.juice-img {
+  width: 140px;
+  transform: rotate(15deg);
+  left: 1rem;
+  right: 0;
+  top: 1rem;
+  margin: 0 auto;
+  animation: float-juice 4s ease-in-out infinite;
+}
+
+@keyframes float-juice {
+  0% {
+    transform: translateY(0) rotate(15deg);
+  }
+  50% {
+    transform: translateY(-1.5rem) rotate(15deg);
+  }
+  100% {
+    transform: translateY(0) rotate(15deg);
+  }
+}
+
+.apple2-img {
+  width: 90px;
+  right: 1.5rem;
+  bottom: 3.5rem;
+}
+
+.apple1-img {
+  width: 100px;
+  transform: rotate(-25deg);
+  top: 7rem;
+  left: 0.65rem;
+}
+
+.leaf1-img,
+.leaf6-img {
+  width: 50px;
+  transform: rotate(30deg);
+}
+
+.leaf2-img,
+.leaf4-img,
+.leaf5-img {
+  width: 40px;
+}
+
+.leaf1-img {
+  top: -7rem;
+  right: 3rem;
+}
+
+.leaf2-img {
+  transform: rotate(-60deg);
+  top: 1.5rem;
+  left: 1.25rem;
+}
+
+.leaf3-img {
+  width: 20px;
+  transform: rotate(15deg);
+  top: 8rem;
+  right: 5rem;
+}
+
+.leaf4-img {
+  bottom: 4rem;
+  left: 3rem;
+}
+
+.leaf5-img {
+  transform: rotate(-30deg);
+  bottom: 0;
+  right: 5rem;
+}
+
+.leaf6-img {
+  bottom: -5rem;
+  left: 3rem;
+}
+
+.home__shape-small,
+.home__shape-big {
+  background-color: hsl(2, 100%, 88%);
+  border-radius: 50%;
+  position: absolute;
+  filter: blur(100px);
+}
+
+.home__shape-small {
+  width: 200px;
+  height: 200px;
+  top: -5rem;
+  left: -5rem;
+}
+
+.home__shape-big {
+  width: 250px;
+  height: 250px;
+  top: 17rem;
+  right: -8rem;
+}
+
+.shape_bg-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  mix-blend-mode: soft-light;
+}
+
+@media screen AND (max-width: 330px) {
+  .home__images {
+    width: 245px;
+    height: 320px;
+  }
+  .liquid-img {
+    width: 250px;
+    left: 0;
+  }
+
+  .juice-img {
+    width: 100px;
+  }
+
+  .apple1-img,
+  .apple2-img {
+    width: 70px;
+  }
+}
+
+@media screen AND (min-width: 767px) {
+  .home__container {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    align-items: center;
+    column-gap: 4rem;
+    padding-top: 4rem;
+    height: 100vh;
+  }
+}
+
+@media screen AND (min-width: 1024px) {
+  .home__images {
+    width: 530px;
+    height: 590px;
+  }
+  .liquid-img {
+    width: 530px;
+  }
+  .juice-img {
+    width: 220px;
+    left: 0;
+    top: 1.5rem;
+  }
+  .apple1-img {
+    width: 180px;
+    top: 10rem;
+    left: -1rem;
+  }
+  .apple2-img {
+    width: 185px;
+    right: 0.5rem;
+    bottom: 5.5rem;
+  }
+  .leaf1-img,
+  .leaf6-img {
+    width: 70px;
+  }
+  .leaf2-img,
+  .leaf4-img,
+  .leaf5-img {
+    width: 60px;
+  }
+
+  .leaf1-img {
+    top: -1rem;
+    right: 2rem;
+  }
+
+  .leaf2-img {
+    top: 2rem;
+    left: 2.25rem;
+  }
+
+  .leaf3-img {
+    width: 40px;
+    top: 12rem;
+    right: 10rem;
+  }
+
+  .leaf4-img {
+    bottom: 8rem;
+    left: 4.5rem;
+  }
+
+  .leaf5-img {
+    right: 10rem;
+  }
+
+  .leaf6-img {
+    bottom: 1rem;
+    left: -8rem;
+  }
+
+  .home__shape-small {
+    width: 400px;
+    height: 400px;
+    top: 0rem;
+    left: -15rem;
+  }
+
+  .home__shape-big {
+    width: 500px;
+    height: 500px;
+    top: 22rem;
+    right: -14rem;
+  }
+  
+}
